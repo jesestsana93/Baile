@@ -1,0 +1,440 @@
+//--------------------------------------
+// 			PATRON DE COLORES
+//--------------------------------------
+$principal: rgb(2, 5, 16);
+$secundario: rgb(255, 255, 255);
+
+/*------------------------------
+1. TIPOGRAFIA DEL SITIO
+--------------------------------*/
+html {
+    font-size: 13px;
+}
+
+body {
+    color: $secundario;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*------------------------------
+2. ESTILOS GENERALES
+--------------------------------*/
+.bg-primary {
+    background-color: $principal !important;
+}
+
+section {
+    margin: 2rem 0 !important;
+}
+
+section:first-child {
+    margin: 0 !important;
+}
+
+.titulo {
+    text-transform: uppercase;
+    color: $principal;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    margin-bottom: 2.3rem !important;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 12rem;
+        height: 0.2rem;
+        background-color: currentcolor;
+        top: 3rem;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}
+
+/*------------------------------
+3. INICIO
+--------------------------------*/
+/*----Barra de navegacion----*/
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+/*Estilos al logotipo del sitio*/
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/*Estilos para los enlaces del menu*/
+.navbar-dark .navbar-nav .nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: $secundario;
+    text-transform: uppercase;
+    margin-right: .3rem;
+    border-bottom: 2px solid $secundario;
+    transition: all .3s ease;
+
+    &:hover,
+    &:focus,
+    &.active {
+        background-color: $secundario;
+        color: $principal;
+        border-radius: 3rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/*Boton del menu */
+.boton-menu:before {
+    content: "\f142";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #fff;
+    font-size: 3rem;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+}
+
+.icono-cerrar:before {
+    content: "\f00d";
+    position: relative;
+    left: .2rem;
+    font-size: 3rem;
+}
+
+/*Banner de la página*/
+#inicio {
+    background-image: url(../images/banner-movil.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/*------------------------------
+4. NOSOTROS
+--------------------------------*/
+#nosotros {
+
+    .titulo {
+        color: $secundario;
+        margin: 1rem 0;
+    }
+
+    .centrado {
+        background-color: $principal;
+        color: $secundario;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 .8rem;
+    }
+}
+
+/*------------------------------
+5. CLASES
+--------------------------------*/
+#clases {
+
+    .table-bordered td {
+        border: 1px solid $principal;
+    }
+
+    .table-bordered th {
+        border: 1px solid $secundario;
+    }
+
+    th {
+        background-color: $principal;
+        color: $secundario;
+        text-align: center;
+
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.bachata {
+    background-color: red;
+    color: $secundario;
+}
+
+.cumbia {
+    background-color: #892299;
+    color: $secundario;
+}
+
+.danza {
+    background-color: yellow;
+    color: $principal;
+}
+
+.kizomba {
+    background-color: green;
+    color: $secundario;
+}
+
+.merengue {
+    background-color: rgb(95, 158, 160);
+    color: $secundario;
+}
+
+.quebradita {
+    background-color: orange;
+    color: $principal;
+}
+
+.salsa {
+    background-color: #4B7F9E;
+    color: $secundario;
+}
+
+.salsa-cubana {
+    background-color: blue;
+    color: $secundario;
+}
+
+.tango {
+    background-color: brown;
+    color: $secundario;
+}
+
+.zouk {
+    background-color: moccasin;
+    color: $principal;
+}
+
+.zumba {
+    background-color: pink;
+    color: $principal;
+}
+
+/*------------------------------
+6. PROMOCIONES
+--------------------------------*/
+.promociones {
+    background-color: $secundario;
+    text-align: center;
+    border: 5px solid $principal;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    transition: all 1s ease;
+
+    .fas {
+        font-size: 4rem;
+        color: $principal;
+        margin-bottom: 1rem;
+        transition: all 1s ease;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 50px green;
+    }
+
+    p {
+        color: $principal;
+        transition: all .5s ease;
+
+        &:before {
+            content: '\f00c';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 5px;
+            font-size: 20px;
+            color: green;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+/*------------------------------
+7. PROFESORES
+--------------------------------*/
+#profesores {
+    .col-lg-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .proyecto {
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 9rem;
+        height: 9rem;
+
+        .mascara {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #686788ba;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all .4s ease;
+            z-index: 10;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            p {
+                position: relative;
+                transition: all .3s ease;
+                /*Correción para IE11+*/
+                width: 100%;
+                color: $secundario;
+            }
+        }
+
+        img {
+            transition: all .3s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.3);
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/*------------------------------
+8. TESTIMONIALES
+--------------------------------*/
+#testimoniales {
+    .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p,
+    em {
+        color: $principal;
+    }
+
+    em {
+        display: block;
+        margin-top: .5rem;
+        font-size: .8rem;
+    }
+
+    img {
+        width: 9rem;
+        height: 9rem;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    }
+}
+
+/*------------------------------
+9. CONTACTO
+--------------------------------*/
+#contacto {
+    background-color: rgb(15, 72, 130);
+    padding: 1.5rem 0;
+    margin: 0 !important;
+
+    p {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: $secundario;
+            font-size: 1.2rem;
+
+            .fa-link:before {
+                font-size: .8rem;
+                padding: 0 .3rem;
+            }
+        }
+
+    }
+
+    .redes {
+        font-size: 2rem;
+        padding: 0 .5rem;
+        color: $secundario;
+        transition: all .5s ease;
+
+        &:hover {
+            transform: scale(1.4) rotate(360deg);
+        }
+    }
+}
+
+/* =============================================
+X. Show de las Medias Queries
+============================================= */
+/* --------------Vista Md ------------- */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    #inicio {
+        background-image: url(../images/banner.jpg);
+    }
+}
+
+/* --------------Vista Lg ------------- */
+@media (min-width: 992px) {
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 1.1rem;
+        text-transform: none;
+        border-bottom: none;
+    }
+}
+
+/* --------------Vista Xl ------------- */
+@media (min-width: 1200px) {
+    font-size: 17px;
+}

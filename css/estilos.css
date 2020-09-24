@@ -12,10 +12,14 @@ body {
 /*------------------------------
 2. ESTILOS GENERALES
 --------------------------------*/
+.bg-nav {
+  background-color: black; }
+
 .bg-primary {
   background-color: #020510 !important; }
 
-section {
+section,
+main {
   margin: 2rem 0 !important; }
 
 section:first-child {
@@ -99,35 +103,114 @@ section:first-child {
 
 /*Banner de la página*/
 #inicio {
-  background-image: url(../images/banner-movil.jpg);
-  background-position: center center;
+  background-image: url(../images/banner.jpg);
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh; }
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  text-align: center; }
+  #inicio:before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  #inicio .texto-encabezado {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #inicio .texto-encabezado .borde {
+      border: 3px solid white;
+      -webkit-transform: skewX(-15deg);
+              transform: skewX(-15deg); }
+    #inicio .texto-encabezado h1 {
+      font-size: 4.3rem;
+      text-transform: uppercase;
+      -webkit-transform: skewX(15deg);
+              transform: skewX(15deg); }
+      #inicio .texto-encabezado h1 span {
+        font-weight: 900; }
+    #inicio .texto-encabezado em {
+      font-size: 1.5rem; }
 
 /*------------------------------
 4. NOSOTROS
 --------------------------------*/
-#nosotros .titulo {
-  color: white;
-  margin: 1rem 0; }
-#nosotros .centrado {
-  background-color: #020510;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 .8rem; }
+#nosotros {
+  /*Estilos aplicados a venobox para la parte de la imagen-video*/ }
+  #nosotros .titulo {
+    color: white;
+    margin: 1rem 0; }
+  #nosotros .centrado {
+    background-color: #020510;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 .8rem; }
+  #nosotros .contenedor-video a {
+    background-color: rgba(255, 255, 255, 0.79);
+    width: 7rem;
+    height: 7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 50%;
+    color: #020510;
+    font-size: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-clip: padding-box;
+    border: 0 solid transparent;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
+  #nosotros .contenedor-video a:hover {
+    background-color: #020510;
+    color: #fff;
+    border: 10px solid rgba(255, 255, 255, 0.5); }
+  #nosotros .contenedor-video img {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease; }
+  #nosotros .contenedor-video:hover img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
 
 /*------------------------------
 5. CLASES
@@ -331,7 +414,20 @@ section:first-child {
           clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); }
 
 /*------------------------------
-9. CONTACTO
+9. SOCIALES
+--------------------------------*/
+#sociales p {
+  color: #020510;
+  font-size: 1.2rem;
+  text-align: center; }
+#sociales a {
+  text-decoration: none; }
+#sociales img {
+  height: 7rem;
+  width: 7rem; }
+
+/*------------------------------
+10. CONTACTO
 --------------------------------*/
 #contacto {
   background-color: #0f4882;
@@ -365,10 +461,7 @@ X. Show de las Medias Queries
 /* --------------Vista Md ------------- */
 @media (min-width: 768px) {
   html {
-    font-size: 16px; }
-
-  #inicio {
-    background-image: url(../images/banner.jpg); } }
+    font-size: 16px; } }
 /* --------------Vista Lg ------------- */
 @media (min-width: 992px) {
   .navbar-dark .navbar-nav .nav-link {

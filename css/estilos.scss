@@ -19,11 +19,16 @@ body {
 /*------------------------------
 2. ESTILOS GENERALES
 --------------------------------*/
+.bg-nav {
+    background-color: rgb(0, 0, 0);
+}
+
 .bg-primary {
     background-color: $principal !important;
 }
 
-section {
+section,
+main {
     margin: 2rem 0 !important;
 }
 
@@ -120,12 +125,55 @@ section:first-child {
 
 /*Banner de la página*/
 #inicio {
-    background-image: url(../images/banner-movil.jpg);
-    background-position: center center;
+    background-image: url(../images/banner.jpg);
+    background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: $secundario;
+    text-align: center;
+
+    &:before {
+        content: '';
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .texto-encabezado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .borde {
+            border: 3px solid $secundario;
+            transform: skewX(-15deg);
+        }
+
+        h1 {
+            font-size: 4.3rem;
+            text-transform: uppercase;
+            transform: skewX(15deg);
+
+            span {
+                font-weight: 900;
+            }
+        }
+
+        em {
+            font-size: 1.5rem;
+        }
+    }
+
 }
+
 
 /*------------------------------
 4. NOSOTROS
@@ -145,6 +193,41 @@ section:first-child {
         justify-content: center;
         align-items: center;
         padding: 0 .8rem;
+    }
+
+    /*Estilos aplicados a venobox para la parte de la imagen-video*/
+    .contenedor-video a {
+        background-color: rgba(255, 255, 255, 0.79);
+        width: 7rem;
+        height: 7rem;
+        display: flex;
+        border-radius: 50%;
+        color: $principal;
+        font-size: 2rem;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-clip: padding-box;
+        border: 0 solid transparent;
+        transition: all .5s ease;
+    }
+
+    .contenedor-video a:hover {
+        background-color: $principal;
+        color: #fff;
+        border: 10px solid rgba(255, 255, 255, 0.50);
+    }
+
+    .contenedor-video img {
+        transition: all .5s ease;
+    }
+
+    .contenedor-video:hover img {
+        transform: scale(1.2);
     }
 }
 
@@ -371,7 +454,28 @@ section:first-child {
 }
 
 /*------------------------------
-9. CONTACTO
+9. SOCIALES
+--------------------------------*/
+#sociales {
+    p {
+        color: $principal;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        height: 7rem;
+        width: 7rem;
+    }
+
+}
+
+/*------------------------------
+10. CONTACTO
 --------------------------------*/
 #contacto {
     background-color: rgb(15, 72, 130);
@@ -420,9 +524,6 @@ X. Show de las Medias Queries
         font-size: 16px;
     }
 
-    #inicio {
-        background-image: url(../images/banner.jpg);
-    }
 }
 
 /* --------------Vista Lg ------------- */

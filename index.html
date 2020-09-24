@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="images/logos/danceroom.png">
 
     <!--ETIQUETAS PARA EL SEO-->
-    <meta name="keywords" content="Dance room">
+    <meta name="keywords" content="Dance room, baile, salsa, bachata, cumbia, kizomba">
     <meta name="description" content=" Somos">
     <meta name="author" content="">
     <meta name="owner" content="">
@@ -20,8 +20,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--  CARGA DE FONT AWESOME -->
     <link rel="stylesheet" href="css/all.min.css">
+    <!-- CARGA DEL CSS DE "VENOBOX" -->
+    <link rel="stylesheet" href="css/venobox.css">
+    <!--  CARGA DE GALERIA DE IMÁGENES CON EL SLIDER SLICK.CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!--Add the new slick-theme.css if you want the default styling-->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <!-- CARGA DE FUENTES DE GOOGLE -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i">
+    <!-- CARGA DE ANIMATE.CSS PARA EL FUNCIONAMIENTO DE ANIMACIONES CON WOW.JS -->
+    <link rel="stylesheet" href="css/animate.css">
     <!-- CARGA DE ESTILOS CSS PERSONALIZADOS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -31,8 +39,8 @@
     =            Sección inicio            =
     ======================================-->
     <section id="inicio">
-        <header class="navbar-fixed-top">
-            <nav id="menu-navegacion" class="navbar navbar-dark bg-primary navbar-expand-lg">
+        <header class="navbar-fixed-top" id="encabezado">
+            <nav id="menu-navegacion" class="navbar navbar-dark bg-nav navbar-expand-lg">
                 <div class="container">
                     <a href="index.html" class="navbar-brand logo">
                         <img src="images/logos/dance-room.png" alt="Logo del sitio" class="logo">
@@ -52,24 +60,39 @@
                             <li class="nav-item"><a href="#promociones" class="nav-link">Promociones</a></li>
                             <li class="nav-item"><a href="#profesores" class="nav-link">Profesores</a></li>
                             <li class="nav-item"><a href="#testimoniales" class="nav-link">Testimoniales</a></li>
+                            <li class="nav-item"><a href="#sociales" class="nav-link">Sociales</a></li>
                             <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
                         </ul>
                     </div>
                 </div> <!-- /.container-->
             </nav>
         </header>
+        <div class="texto-encabezado">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="borde mb-4 wow bounceIn" data-wow-delay=".3s">
+                            <h1 class="wow bounceIn px-sm-5">Dance <span>R</span>oom</h1>
+                        </div>
+                        <em>Todas las experiencias...<br class="d-md-none"><span class="typed"></span></em>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section><!-- /#inicio-->
 
     <!--=====================================
     =            Sección nosotros            =
     ======================================-->
-    <section id="nosotros">
+    <main id="nosotros" class="wow slideInLeft" data-wow-delay=".4s">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-6">
-                    <img src="images/nosotros.jpg" alt="Nosotros" class="img-fluid">
-                    <!--a href="" class="venobox-video" data-vbtype="video" title="Bienvenidos a nuestro sitio web."><i
-                            class="fas fa-play"></i></a-->
+                    <div class="contenedor-video position-relative text-truncate">
+                        <img src="images/nosotros.jpg" alt="Imagen del video promocional del Sitio" class="img-fluid">
+                        <a href="http://www.youtu.be/vVV5LXTnmVc" class="venobox-video" data-vbtype="video"
+                            title="Bienvenidos a Dance Room."><i class="fas fa-play"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-6 centrado">
                     <h1 class="titulo">Nosotros</h1>
@@ -80,12 +103,12 @@
                 </div>
             </div><!-- /.row-->
         </div><!-- /.container-->
-    </section><!-- /#nosotros-->
+    </main><!-- /#nosotros-->
 
     <!--=====================================
     =            Sección clases            =
     ======================================-->
-    <section id="clases">
+    <section id="clases" class="wow pulse" data-wow-duration="2s" data-wow-delay=".5s">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -234,7 +257,7 @@
     <!--=====================================
     =            Sección promociones            =
     ======================================-->
-    <section id="promociones">
+    <section id="promociones" class="wow slideInRight" data-wow-delay=".4s">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -280,10 +303,11 @@
     <section id="profesores">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h3 class="titulo">Profesores</h3>
+                <div class="col-12 wow slideInUp" data-wow-duration="2s" data-wow-delay=".8s">
+                    <h3 class=" titulo">Profesores
+                    </h3>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay=".3s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Merengue</p>
@@ -292,7 +316,7 @@
                     </a>
                     <p class="merengue">Aurea Prado</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay=".6s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Bachata</p>
@@ -301,7 +325,7 @@
                     </a>
                     <p class="bachata">José Nolasco</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay=".9s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Kizomba</p>
@@ -310,7 +334,7 @@
                     </a>
                     <p class="kizomba">Fersh Alva</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="1.2s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Zumba</p>
@@ -319,7 +343,7 @@
                     </a>
                     <p class="zumba">Laura González</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="1.5s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Danza árabe</p>
@@ -328,7 +352,7 @@
                     </a>
                     <p class="danza">Breen Moon</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="1.8s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Tango</p>
@@ -337,7 +361,7 @@
                     </a>
                     <p class="tango">Roberto Ramírez</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="2.1s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Salsa</p>
@@ -346,7 +370,7 @@
                     </a>
                     <p class="salsa">Rayo CR</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="2.4s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Zouk</p>
@@ -355,7 +379,7 @@
                     </a>
                     <p class="zouk">Nurita Armenta</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="2.7s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Salsa cubana</p>
@@ -364,7 +388,7 @@
                     </a>
                     <p class="salsa-cubana">Sergio Hidalgo</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="3s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Cumbia</p>
@@ -373,7 +397,7 @@
                     </a>
                     <p class="cumbia">Pepe Hernández</p>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="col-sm-6 col-md-4 col-lg-3 wow slideInLeft" data-wow-delay="3.3s">
                     <a href="" class="proyecto">
                         <div class="mascara">
                             <p>Quebradita</p>
@@ -395,17 +419,17 @@
                 <div class="col-12">
                     <h3 class="titulo">Testimoniales</h3>
                 </div>
-                <div class="col-md-4">
-                    <img src="images/jesus.jpg" alt="Testimonio 1" class="img-fluid prueba">
+                <div class="col-md-4 wow bounceInLeft" data-wow-delay=".3s">
+                    <img src="images/Karina.jpg" alt="Testimonio 1" class="img-fluid prueba">
                     <em>"Me gustan mucho las clases de zumba que da Laura"</em>
                     <p>Karina Oropeza</p>
                 </div>
-                <div class="col-md-4">
-                    <img src="images/jesus.jpg" alt="Testimonio 2" class=" img-fluid prueba">
+                <div class="col-md-4 wow bounceInUp" data-wow-delay=".6s">
+                    <img src="images/Sahian.jpg" alt="Testimonio 2" class=" img-fluid prueba">
                     <em>"Las clases de tango que da Robert son otro nivel"</em>
                     <p>Sahian Sague</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 wow bounceInRight" data-wow-delay="1s">
                     <img src="images/jesus.jpg" alt="Testimonio 3" class=" img-fluid">
                     <em>"Me ha encantado la salsa gracias a Rayo "</em>
                     <p>Jesús Sánchez</p>
@@ -413,6 +437,103 @@
             </div><!-- /.row-->
         </div><!-- /.container-->
     </section><!-- /#testimoniales-->
+
+    <!--=====================================
+    =            Sección sociales            =
+    ======================================-->
+    <section id="sociales">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="titulo">Sociales</h3>
+                    <p>Sociales en los cuales puedes practicar, conocer gente y bailar</p>
+                    <div class="sociales">
+                        <div>
+                            <a href="https://www.facebook.com/groups/321959154678743" target="blank">
+                                <img src="images/logos/sociales-romo.jpg" alt="Miercoles sociales Romo">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/EsenciaBachataSocial" target="blank">
+                                <img src="images/logos/esencia.png" alt="Esencia">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/RumbaSalsaSocial" target="blank">
+                                <img src="images/logos/rumba-salsa-social.jpg" alt="Rumba salsa social">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/PalladiumSalsaSocial" target="blank">
+                                <img src="images/logos/palladium.jpg" alt="Palladium">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/Salsaycandela" target="blank">
+                                <img src="images/logos/candela.png" alt="Salsa candela">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/bachataroomdf" target="blank">
+                                <img src="images/logos/bachata-room.jpg" alt="Bachata room">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/Bachasauna" target="blank">
+                                <img src="images/logos/bachasauna3.jpg" alt="Bachasauna">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/ElBailongoYLaFiestaDelSolar/" target="blank">
+                                <img src="images/logos/bailongo-LaMaraka.jpg" alt="El bailongo la maraka">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/Obatal%C3%A1-Social-Dance-Areito-Dance-Company-476746062692774"
+                                target="blank">
+                                <img src="images/logos/obatala.jpg" alt="Obatala">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/CityDanceMX" target="blank">
+                                <img src="images/logos/city-dance2.jpg" alt="City dance">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/logos/magic-palace2.jpg" alt="Magic palace">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/RumbaCDMX/" target="blank">
+                                <img src="images/logos/rumba.jpg" alt="Rumba sensual">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/magicpalacedance" target="blank">
+                                <img src="images/logos/rumbamania.jpg" alt="Rumbamania">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/TardeadaBachaSalsa" target="blank">
+                                <img src="images/logos/bachasalsa.png" alt="Tardeada Bachasalsa">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/danceroommx" target="blank">
+                                <img src="images/logos/dance-room.png" alt="Dance Room">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/Salsainntheparkmex" target="blank">
+                                <img src="images/logos/salsainthepark.jpg" alt="Salsa in the park">
+                            </a>
+                        </div>
+                    </div><!-- /.owl-carousel-->
+                </div><!-- /.col-12-->
+            </div><!-- /.row-->
+        </div><!-- /.container-->
+    </section><!-- /#sociales-->
 
     <!--=====================================
     =            Sección contacto            =
@@ -445,7 +566,7 @@
                         contactar a través de nuestras redes sociales</p>
                     <a href="https://www.facebook.com/danceroommx" target="blank"><i
                             class="fab fa-facebook redes"></i></a>
-                    <a href="danceroommx@gmail.com" target="blank"><i class="far fa-envelope redes"></i></a>
+                    <a href="mailto: danceroommx@gmail.com" target="blank"><i class="far fa-envelope redes"></i></a>
                     <a href="https://www.instagram.com/dance_room_mx/" target="blank"><i
                             class="fab fa-instagram redes"></i></a>
                     <a href="https://www.youtube.com/channel/UCdkj25K_59os-ANDv5PBw6w" target="blank"><i
@@ -461,11 +582,18 @@
 
     <!-- CARGAR DE JQUERY -->
     <script src="js/jquery-3.5.1.min.js"></script>
-
     <!-- CARGA DE BOOTSTRAP JS -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- CARGA DE TYPED.MIN.JS PARA EL EFECTO DE SHUFFLE LETTERS -->
+    <script src="js/typed.min.js"></script>
+    <!-- Carga de "VenoBox" para la parte animada del vídeo "nosotros"-->
+    <script src="js/venobox.min.js"></script>
+    <!-- CARGA DE SLICK PARA EL CARROUSEL DE LOS SOCIALES-->
+    <script src="js/slick.min.js"></script>
     <!-- Carga de "page-scroll-to-id" | Crean el efecto de scroll entre los enlaces-->
     <script src="js/jquery.malihu.PageScroll2id.min.js"></script>
+    <!-- Carga de wow.min.js | Inicia las animaciones con animate.css-->
+    <script src="js/wow.min.js"></script>
     <!-- Carga de scripts.js | Inicia las funciones de los scripts -->
     <script src="js/scritps.js"></script>
 </body>

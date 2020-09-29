@@ -17,19 +17,7 @@ $(function () {
     });
 
     /*-------------------------------------------------------
-       2. OCULTAR Y MOSTRAR BOTON IR ARRIBA
-    ------------------------------------------------------*/
-    $(window).scroll(function () {
-        var scrolltop = $(this).scrollTop();
-        if (scrolltop >= 50) {
-            $(".ir-arriba").fadeIn(); //muestra la flechita
-        } else {
-            $(".ir-arriba").fadeOut(); //oculta la flechita
-        }
-    });
-
-    /*-------------------------------------------------------
-      3. Iniciando el script Typed.js para las letras de la sección de inicio
+      2. Iniciando el script Typed.js para las letras de la sección de inicio
     ------------------------------------------------------*/
     var typed = new Typed('.typed', { //^2000:indica el tiempo del texto que lo antecede
         strings: ["en un mismo lugar ^2000"],
@@ -44,7 +32,7 @@ $(function () {
     });
 
     /*-----------------------------------------------------------
-       4. INICIANDO VENOBOX
+       3. INICIANDO VENOBOX
     -------------------------------------------------------------*/
     $('.venobox-video').venobox({
         autoplay: true,
@@ -56,7 +44,7 @@ $(function () {
     });
 
     /*-----------------------------------------------------------
-    2. CONFIGURACION DE SLICK PARA LA PARTE DE ALGUNOS DE NUESTROS CLIENTES
+    4. CONFIGURACION DE SLICK PARA LA PARTE DE ALGUNOS DE NUESTROS CLIENTES
     ------------------------------------------------------------*/
     $('.sociales').slick({
         dots: false,
@@ -102,7 +90,7 @@ $(function () {
 
 
     /*-----------------------------------------------------------
-    6. INICIANDO "page-scroll-to-id"
+    5. INICIANDO "page-scroll-to-id"
     -------------------------------------------------------------*/
     $('#menu-principal a').mPageScroll2id({
         offset: 100,
@@ -110,7 +98,7 @@ $(function () {
     });
 
     /*------------------------------------------------------------
-    7. INICIANDO WOW.js para las animaciones en la página
+    6. INICIANDO WOW.js para las animaciones en la página
     --------------------------------------------------------------*/
     new WOW().init();
 
